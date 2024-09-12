@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetsMenu(fileName = "Pokemon", menuName = "Pokemon/Create new Pokemon")]
+
 public class PokeMonBase : ScriptableObject
 {
 	[SerializeField] string name;
 	
+	[TextAreas]
 	[SerializeField] string description;
 	
 	[SerializeField] string frontSprite;
@@ -27,6 +30,7 @@ public class PokeMonBase : ScriptableObject
 public enum PokemonType
 {
 	Ruby,
+	Emerald,
 	Sapphire,
 	Silver,
 	Gold,
@@ -35,5 +39,4 @@ public enum PokemonType
 	Beast,
 	Spirt,
 	Demon,
-	Earth,
 }
